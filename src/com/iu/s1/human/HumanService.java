@@ -11,6 +11,10 @@ public class HumanService {
 		sc = new Scanner(System.in);
 	}
 	
+	//이름을 입력 받아서 같은 이름이 있는 HumanDTO의 인덱스 번호 찾기
+	//찾아서 삭제
+	//리턴 삭제여부
+	
 	//이름을 입력받아서 같은 이름이 있는 HumanDTO 찾아서 리턴
 	public HumanDTO searchHuman(List<HumanDTO> ar) {
 		System.out.println("이름을 입력");

@@ -10,6 +10,7 @@ public class HumanService {
 		sc = new Scanner(System.in);
 	}
 	
+	//이름을 입력받아서 같은 이름이 있는 HumanDTO 찾아서 리턴
 	
 	public HumanDTO addHuman() {
 		HumanDTO humanDTO = new HumanDTO();

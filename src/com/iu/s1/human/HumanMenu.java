@@ -11,6 +11,7 @@ public class HumanMenu {
 	public void select() {
 		Scanner sc = new Scanner(System.in);
 		HumanService hs = new HumanService();
+		HumanView hv = new HumanView();
 		ArrayList<HumanDTO> ar = new ArrayList<>();
 		boolean check=true;
 		while(check) {
@@ -22,14 +23,14 @@ public class HumanMenu {
 			int select = sc.nextInt();
 			
 			if(select==1) {
-				System.out.println("11111");
+				hv.view(ar);
 			}else if(select==2) {
 				System.out.println("22222");
 			}else if(select==3) {
-				System.out.println("33333");
+				
 				HumanDTO humanDTO = hs.addHuman();
 				ar.add(humanDTO);
-				System.out.println(ar);
+				
 			}else if(select==4) {
 				System.out.println("44444");
 			}else {

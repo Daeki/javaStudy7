@@ -35,7 +35,13 @@ public class HumanMenu {
 				ar.add(humanDTO);
 				
 			}else if(select==4) {
-				System.out.println("44444");
+				boolean flag = hs.deleteHuman(ar);
+				if(flag) {
+					System.out.println("성공");
+				}else {
+					System.out.println("실패");
+				}
+				
 			}else {
 				System.out.println("Finish");
 				break;

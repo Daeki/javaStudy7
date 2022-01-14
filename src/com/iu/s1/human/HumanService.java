@@ -13,7 +13,26 @@ public class HumanService {
 	
 	//이름을 입력 받아서 같은 이름이 있는 HumanDTO의 인덱스 번호 찾기
 	//찾아서 삭제
-	//리턴 삭제여부
+	//리턴 삭제여부  0:성공, 1:실패  S:성공, F:실패  true:성공,false:실패
+	public boolean deleteHuman(List<HumanDTO> ar) {
+		System.out.println("삭제할 이름 입력");
+		String name = sc.next();
+		
+		boolean result=false;
+		HumanDTO humanDTO = null;
+		for(int i=0;i<ar.size();i++) {
+			if(name.equals(ar.get(i).getName() ) ) {
+				humanDTO= ar.get(i);
+				//result = ar.remove(ar.get(i));
+				//humanDTO = ar.remove(i);
+				//result=true;
+				break;
+			}
+		}
+		
+		return ar.remove(humanDTO); //result;
+		
+	}
 	
 	//이름을 입력받아서 같은 이름이 있는 HumanDTO 찾아서 리턴
 	public HumanDTO searchHuman(List<HumanDTO> ar) {

@@ -16,6 +16,7 @@ public class HumanView {
 			System.out.println("Email : "+humanDTO.getEmail());
 			System.out.println("Phone : "+humanDTO.getPhone());
 			System.out.println("Birth : "+humanDTO.getBirth());
+			//2000년 12월 24일 (수) 
 		}else {
 			System.out.println("정보가 없다");
 		}

@@ -1,5 +1,6 @@
 package com.iu.s1.human;
 
+import java.util.Calendar;
 import java.util.List;
 import java.util.Scanner;
 
@@ -63,7 +64,17 @@ public class HumanService {
 		System.out.println("전화번호 입력");
 		humanDTO.setPhone(sc.next());
 		System.out.println("생일 입력");
-		humanDTO.setBirth(sc.next());
+		String s = sc.next();//20001224
+		int year = Integer.parseInt(s.substring(0,4));
+		int month = Integer.parseInt(s.substring(4, 6));
+		int date = Integer.parseInt(s.substring(6));
+		
+		//Calendar
+		Calendar calendar = Calendar.getInstance();
+		calendar.set(year, month-1, date);
+		
+		humanDTO.setBirth(calendar);
+		
 		return humanDTO;
 	}
 
